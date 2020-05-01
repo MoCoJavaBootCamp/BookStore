@@ -1,25 +1,25 @@
 public class Book {
-    double price;
-
-
-
+    double price = 20.00;
     boolean inStock;
 
+    // default constructor
     Book() {
-        this.price = 20.00;
         this.inStock = false;
     }
-
+    // constructor to override
     Book(boolean inStock) {
-        this.price = 20.00;
         this.inStock = inStock;
     }
 
-    public boolean isInStock() {
+    public double getPrice() {
+        return price;
+    }
+
+    public boolean getInStock() {
         return inStock;
     }
 
-    public void setInStock(boolean inStock) {
-        this.inStock = inStock;
+    public void toggleStock() {
+        this.inStock = !inStock;
     }
 }
